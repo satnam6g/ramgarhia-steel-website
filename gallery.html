@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | Ramgarhia Steel by Welder Singh</title>
+<meta name="description" content="Browse finished gates, stair railings, glass railings and window grills made by Ramgarhia Steel in Mandi Gobindgarh, Punjab.">
+<meta property="og:title" content="Gallery | Ramgarhia Steel by Welder Singh">
+<meta property="og:description" content="Finished gates, railings and grills from our workshop in Mandi Gobindgarh.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101010;--bg2:#171717;--card:#1B1A19;--cream:#EDE3CF;--text:#D6CDBB;--muted:#A39B8E;--line:#2C2A27;--spark:#FF7A1A;--serif:"Instrument Serif",Georgia,serif;--sans:Inter,system-ui,sans-serif;--pad:clamp(20px,3.2vw,48px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.eyebrow.o{color:var(--spark)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;border:1px solid rgba(237,227,207,.35);border-radius:999px;padding:12px 24px;font-size:15px;font-weight:500;transition:background .3s,color .3s,border-color .3s;white-space:nowrap}
+.pill:hover{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.pill.solid{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.pill.solid:hover{background:transparent;color:var(--cream)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+:focus-visible{outline:2px solid var(--spark);outline-offset:3px}
+
+.ghead{position:sticky;top:0;z-index:40;background:rgba(16,16,16,.9);border-bottom:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.gnav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brand svg{width:34px;height:34px}
+.brand span{font-family:var(--serif);font-size:23px;line-height:1}
+.back{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;color:var(--text);transition:color .3s}
+.back:hover{color:var(--spark)}
+.back svg{width:18px;height:18px}
+
+.gintro{padding:clamp(64px,8vw,118px) 0 clamp(30px,4vw,52px)}
+.gintro .eyebrow{margin-bottom:16px}
+.gintro h1{font-family:var(--serif);font-weight:400;font-size:clamp(64px,10vw,152px);line-height:.9;letter-spacing:-.02em}
+.gintro h1 em{font-style:italic}
+.lead{color:var(--text);font-size:clamp(17px,1.4vw,20px);max-width:700px;margin-top:24px}
+.cats{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.cats a{display:inline-flex;align-items:center;gap:9px;min-height:44px;border:1px solid rgba(237,227,207,.28);border-radius:999px;padding:10px 18px;font-size:14px;font-weight:500;color:var(--text);transition:background .3s,color .3s,border-color .3s}
+.cats a:hover{background:rgba(237,227,207,.08);color:var(--cream)}
+.cats a[aria-current="page"]{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.cats a span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.cats a[aria-current="page"] span{color:rgba(16,16,16,.6)}
+
+.gregion{padding-bottom:clamp(70px,9vw,120px)}
+.gbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px;color:var(--muted);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase}
+.gbar b{font-weight:500;color:var(--text)}
+.grid{columns:3;column-gap:clamp(14px,1.8vw,24px)}
+@media (max-width:1040px){.grid{columns:2}}
+@media (max-width:620px){.grid{columns:1}}
+.shot{break-inside:avoid;margin:0 0 clamp(14px,1.8vw,24px);display:block}
+.shot-btn{display:block;width:100%;padding:0;border-radius:14px;overflow:hidden;position:relative;background:var(--card);border:1px solid var(--line);cursor:zoom-in}
+.shot-btn img{width:100%;height:auto;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.shot-btn::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 58%,rgba(0,0,0,.42));pointer-events:none}
+.shot-btn:hover img,.shot-btn:focus-visible img{transform:scale(1.035)}
+.zoom{position:absolute;right:12px;bottom:12px;z-index:2;background:rgba(12,12,12,.84);border:1px solid rgba(237,227,207,.3);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:500;color:var(--cream);opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.shot-btn:hover .zoom,.shot-btn:focus-visible .zoom{opacity:1;transform:none}
+figcaption{padding:10px 2px 0;font-size:13px;line-height:1.45;color:var(--muted)}
+figcaption b{display:block;font-weight:500;color:var(--text)}
+
+.gcta{border-top:1px solid var(--line);background:var(--bg2);padding:clamp(64px,8vw,110px) 0}
+.gcta-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px}
+.gcta h2{font-family:var(--serif);font-weight:400;font-size:clamp(42px,6vw,92px);line-height:.95;margin:14px 0 18px}
+.gcta h2 em{color:var(--spark);font-style:italic}
+.gcta p{color:var(--text);max-width:460px}
+footer{padding:44px 0 30px;background:var(--bg2)}
+.fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:24px}
+.fbot a:hover{color:var(--spark)}
+.noscript{max-width:640px;margin:0 auto;padding:24px;border:1px solid var(--line);border-radius:14px;color:var(--text);text-align:center}
+
+.lb{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;background:rgba(8,8,8,.96);padding:70px clamp(14px,7vw,92px) 22px}
+.lb[hidden]{display:none}
+.lb.open{animation:lbin .28s ease both}
+@keyframes lbin{from{opacity:0}to{opacity:1}}
+.lb-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lb-bar{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding-top:16px;color:var(--text);font-size:14px}
+.lb-bar p{max-width:82%;line-height:1.4}
+.lb-bar span{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.lb-btn{position:fixed;z-index:102;width:56px;height:56px;border:1px solid rgba(237,227,207,.32);border-radius:50%;background:rgba(12,12,12,.72);display:flex;align-items:center;justify-content:center;transition:background .3s,color .3s,border-color .3s}
+.lb-btn:hover{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.lb-btn svg{width:22px;height:22px}
+.lb-close{top:18px;right:18px}
+.lb-prev{left:max(12px,2vw);top:50%;transform:translateY(-50%)}
+.lb-next{right:max(12px,2vw);top:50%;transform:translateY(-50%)}
+
+@media (max-width:600px){
+  body{font-size:15.5px}
+  .gnav{height:66px}
+  .brand svg{width:30px;height:30px}
+  .brand span{font-size:20px}
+  .back{font-size:13px}
+  .back span{display:none}
+  .gintro{padding-top:52px}
+  .lead{font-size:16px}
+  .cats{gap:8px;margin-top:26px;padding-top:20px}
+  .cats a{min-height:42px;padding:9px 14px;font-size:13px}
+  .gcta-in{align-items:flex-start}
+  .btns .pill{flex:1 1 auto}
+  .lb{padding:64px 12px 96px}
+  .lb-bar{padding-bottom:4px;font-size:13px}
+  .lb-bar p{max-width:100%}
+  .lb-btn{width:52px;height:52px}
+  .lb-close{top:12px;right:12px}
+  .lb-prev,.lb-next{top:auto;bottom:max(16px,env(safe-area-inset-bottom));transform:none}
+  .lb-prev{left:14px}
+  .lb-next{right:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .shot-btn:hover img,.shot-btn:focus-visible img{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="ghead">
+  <div class="wrap gnav">
+    <a href="index.html" class="brand" aria-label="Ramgarhia Steel home"><svg viewBox="0 0 801 801" aria-hidden="true"><path fill="#EDE3CF" fill-rule="evenodd" d="M313 563 L314 629 L470 726 L483 721 L643 619 L640 613 L598 589 L586 586 L477 656 L469 658 L327 568 Z M791 555 L782 557 L474 749 L317 653 L314 654 L315 696 L430 767 L475 791 L789 592 Z M344 418 L345 422 L662 606 L683 597 L723 571 L717 563 L450 416 L447 412 L450 408 L490 390 L523 408 L524 413 L510 429 L527 438 L591 400 L585 393 L498 348 L481 346 Z M316 10 L303 14 L26 165 L11 177 L10 526 L23 537 L90 573 L93 572 L95 210 L154 175 L166 172 L330 263 L341 280 L341 297 L330 312 L291 327 L169 257 L162 257 L162 613 L240 657 L244 656 L242 486 L245 471 L469 601 L475 601 L475 531 L471 526 L246 394 L242 388 L242 376 L248 372 L291 397 L300 399 L413 336 L423 315 L423 263 L415 241 L403 224 L376 205 L228 125 L228 121 L367 39 L364 33 Z"/></svg><span>Ramgarhia Steel</span></a>
+    <a href="index.html#work" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Back to our work</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap gintro">
+    <div class="eyebrow o">Our work · Made in Mandi Gobindgarh</div>
+    <h1 id="catTitle">Gates</h1>
+    <p class="lead" id="catDescription">Entry gates in profile steel and stainless steel, made to the size of the house. Some carry the family name, some carry lights; all are built in our Mandi Gobindgarh workshop.</p>
+    <nav class="cats" aria-label="Gallery categories">
+      <a href="gallery.html?category=gates" data-cat="gates">Gates <span>07</span></a>
+      <a href="gallery.html?category=stair-railings" data-cat="stair-railings">Stair Railings <span>03</span></a>
+      <a href="gallery.html?category=glass-railings" data-cat="glass-railings">Glass Railings <span>02</span></a>
+      <a href="gallery.html?category=grills" data-cat="grills">Grills <span>04</span></a>
+    </nav>
+  </section>
+
+  <section class="wrap gregion" aria-labelledby="catTitle">
+    <div class="gbar"><span id="catCount">7 projects</span><span>Tap a photo to enlarge</span></div>
+    <div class="grid" id="grid"></div>
+    <noscript><p class="noscript">This gallery uses a little JavaScript to choose a category. You can still open the <a class="pill" href="index.html#work">main work section</a>.</p></noscript>
+  </section>
+
+  <section class="gcta">
+    <div class="wrap gcta-in">
+      <div>
+        <div class="eyebrow o">Something like this?</div>
+        <h2>Let's make <em>yours.</em></h2>
+        <p>Send a photo of your space and the size on WhatsApp. We reply with designs and the price.</p>
+      </div>
+      <div class="btns">
+        <a class="pill solid" id="waCta" href="https://wa.me/918556999165">WhatsApp the workshop</a>
+        <a class="pill" href="index.html#work">Back to our work</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap fbot">
+    <span>© 2026 Ramgarhia Steel. All rights reserved.</span>
+    <span><a href="index.html#visit">Sua Road, Mandi Gobindgarh</a> · <a href="tel:+918556999165">+91 85569 99165</a></span>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbCaption" aria-describedby="lbCounter" hidden>
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close image viewer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" alt="">
+  </div>
+  <div class="lb-bar" aria-live="polite"><p id="lbCaption"></p><span id="lbCounter"></span></div>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+
+<script type="application/json" id="galleryData">
+{
+  "gates": {
+    "title": "Gates",
+    "description": "Entry gates in profile steel and stainless steel, made to the size of the house. Some carry the family name, some carry lights; all are built in our Mandi Gobindgarh workshop.",
+    "items": [
+      {"src": "gallery/gates/wide-profile-gate.jpg", "width": 960, "height": 1280, "caption": "Wide profile gate with a polished SS frame", "alt": "Wide stainless steel profile gate with vertical panels at a house entrance"},
+      {"src": "gallery/gates/decorative-wood-panel-gate.jpg", "width": 720, "height": 1280, "caption": "Wood-panel gate with decorative steelwork", "alt": "Tall gate with wood-effect panels and decorative stainless steel details"},
+      {"src": "gallery/gates/decorative-dual-motif-gate.jpg", "width": 1280, "height": 1246, "caption": "Dual-motif decorative gate", "alt": "Decorative steel gate with two large circular motifs and cut-work panels"},
+      {"src": "gallery/gates/profile-gate-upper-grill.jpg", "width": 720, "height": 1280, "caption": "Profile gate with an upper grill section", "alt": "Stainless steel profile gate with an upper grill section above the main panels"},
+      {"src": "gallery/gates/modern-profile-gate-house.jpg", "width": 720, "height": 1280, "caption": "Modern profile gate at a private house", "alt": "Modern grey profile gate fitted at the entrance of a private house"},
+      {"src": "gallery/gates/grey-profile-gate-closeup.jpg", "width": 720, "height": 1280, "caption": "Grey profile gate, close view of the panel work", "alt": "Close view of a grey profile gate showing the ribbed panel work and steel frame"},
+      {"src": "gallery/gates/wood-panel-stainless-gate.jpg", "width": 960, "height": 1280, "caption": "Wood-panel stainless steel gate", "alt": "Stainless steel gate with wood-effect panels and a matching side section"}
+    ]
+  },
+  "stair-railings": {
+    "title": "Stair Railings",
+    "description": "Stainless steel and black steel stair railings, measured on site and fitted step by step. Clean lines that stay solid under a hand.",
+    "items": [
+      {"src": "gallery/stair-railings/stainless-modern-stair-railing.jpg", "width": 720, "height": 1280, "caption": "Stainless steel stair railing with clean horizontal lines", "alt": "Modern stainless steel stair railing with horizontal bars along an indoor staircase"},
+      {"src": "gallery/stair-railings/stair-railing-safety-gate.jpg", "width": 720, "height": 1280, "caption": "Stair railing with a matching safety gate", "alt": "Stainless steel stair railing with a matching safety gate at the top landing"},
+      {"src": "gallery/stair-railings/black-horizontal-stair-railing.jpg", "width": 720, "height": 1280, "caption": "Black horizontal-bar stair railing", "alt": "Black steel stair railing with horizontal bars fitted along a staircase"}
+    ]
+  },
+  "glass-railings": {
+    "title": "Glass Railings",
+    "description": "Balcony and staircase glass railings with stainless steel handrails, for homes that want the view without giving up safety.",
+    "items": [
+      {"src": "gallery/glass-railings/frosted-glass-balcony-railing.jpg", "width": 1280, "height": 960, "caption": "Frosted glass balcony railing with an SS handrail", "alt": "Frosted glass balcony railing with a stainless steel handrail and steel posts"},
+      {"src": "gallery/glass-railings/multi-floor-glass-balconies.jpg", "width": 720, "height": 1280, "caption": "Glass balconies across multiple floors", "alt": "Glass balcony railings with stainless steel handrails on several floors of a house"}
+    ]
+  },
+  "grills": {
+    "title": "Grills",
+    "description": "Window and security grills made to fit the opening, with clean bar spacing and a finish that suits the house.",
+    "items": [
+      {"src": "gallery/grills/horizontal-window-grill.jpg", "width": 720, "height": 1280, "caption": "Horizontal-bar window security grill", "alt": "Horizontal-bar stainless steel window security grill fitted to a window"},
+      {"src": "gallery/grills/bay-window-grill.jpg", "width": 597, "height": 1280, "caption": "Bay window grill, made to fit the angle", "alt": "Tall bay window security grill shaped to follow the window frame"},
+      {"src": "gallery/grills/tall-security-grill.jpg", "width": 720, "height": 1280, "caption": "Tall window security grill", "alt": "Tall stainless steel security grill with vertical bars covering a full window"},
+      {"src": "gallery/grills/corner-window-grill.jpg", "width": 720, "height": 1280, "caption": "Corner window grill with a custom frame", "alt": "Corner window security grill with a custom steel frame and vertical bars"}
+    ]
+  }
+}
+</script>
+
+<script>
+(function(){
+  var data = JSON.parse(document.getElementById('galleryData').textContent);
+  var params = new URLSearchParams(window.location.search);
+  var key = params.get('category');
+  if (!data[key]) key = 'gates';
+  var cat = data[key];
+  var grid = document.getElementById('grid');
+  var title = document.getElementById('catTitle');
+  var description = document.getElementById('catDescription');
+  var count = document.getElementById('catCount');
+  var wa = document.getElementById('waCta');
+
+  document.title = cat.title + ' gallery | Ramgarhia Steel by Welder Singh';
+  var meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = cat.description;
+  title.textContent = cat.title;
+  description.textContent = cat.description;
+  count.textContent = cat.items.length + ' project' + (cat.items.length === 1 ? '' : 's');
+  wa.href = 'https://wa.me/918556999165?text=' + encodeURIComponent('Hi Ramgarhia Steel, I would like a quote for a project like the ones in your ' + cat.title + ' gallery.');
+
+  document.querySelectorAll('.cats a').forEach(function(a){
+    if (a.dataset.cat === key) a.setAttribute('aria-current','page');
+    else a.removeAttribute('aria-current');
+  });
+
+  cat.items.forEach(function(item, i){
+    var fig = document.createElement('figure');
+    fig.className = 'shot';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'shot-btn';
+    btn.setAttribute('aria-label', 'Enlarge image: ' + item.caption);
+    var img = document.createElement('img');
+    img.src = item.src;
+    img.alt = item.alt;
+    img.width = item.width;
+    img.height = item.height;
+    img.loading = i < 3 ? 'eager' : 'lazy';
+    img.decoding = 'async';
+    var zoom = document.createElement('span');
+    zoom.className = 'zoom';
+    zoom.setAttribute('aria-hidden','true');
+    zoom.textContent = 'View ↗';
+    btn.appendChild(img);
+    btn.appendChild(zoom);
+    btn.addEventListener('click', function(){ openLb(i, btn); });
+    var cap = document.createElement('figcaption');
+    var b = document.createElement('b');
+    b.textContent = item.caption;
+    cap.appendChild(b);
+    fig.appendChild(btn);
+    fig.appendChild(cap);
+    grid.appendChild(fig);
+  });
+
+  var lb = document.getElementById('lightbox');
+  var stage = document.getElementById('lbStage');
+  var lbImg = document.getElementById('lbImg');
+  var lbCaption = document.getElementById('lbCaption');
+  var lbCounter = document.getElementById('lbCounter');
+  var lbClose = document.getElementById('lbClose');
+  var lbPrev = document.getElementById('lbPrev');
+  var lbNext = document.getElementById('lbNext');
+  var current = 0;
+  var lastFocus = null;
+
+  function show(i){
+    current = (i + cat.items.length) % cat.items.length;
+    var item = cat.items[current];
+    lbImg.src = item.src;
+    lbImg.alt = item.alt;
+    lbCaption.textContent = item.caption;
+    lbCounter.textContent = (current + 1) + ' / ' + cat.items.length;
+    lbImg.width = item.width;
+    lbImg.height = item.height;
+  }
+
+  function openLb(i, opener){
+    lastFocus = opener || document.activeElement;
+    show(i);
+    lb.hidden = false;
+    lb.classList.add('open');
+    document.body.classList.add('locked');
+    lbClose.focus();
+  }
+
+  function closeLb(){
+    lb.classList.remove('open');
+    lb.hidden = true;
+    lbImg.removeAttribute('src');
+    document.body.classList.remove('locked');
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+
+  lbClose.addEventListener('click', closeLb);
+  lbPrev.addEventListener('click', function(){ show(current - 1); });
+  lbNext.addEventListener('click', function(){ show(current + 1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb || e.target === stage) closeLb(); });
+
+  document.addEventListener('keydown', function(e){
+    if (lb.hidden) return;
+    if (e.key === 'Escape'){ e.preventDefault(); closeLb(); }
+    else if (e.key === 'ArrowLeft'){ e.preventDefault(); show(current - 1); }
+    else if (e.key === 'ArrowRight'){ e.preventDefault(); show(current + 1); }
+    else if (e.key === 'Tab'){
+      var f = [lbClose, lbPrev, lbNext];
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  var startX = 0, startY = 0, tracking = false;
+  stage.addEventListener('pointerdown', function(e){
+    if (e.pointerType === 'mouse') return;
+    tracking = true;
+    startX = e.clientX;
+    startY = e.clientY;
+  });
+  stage.addEventListener('pointerup', function(e){
+    if (!tracking) return;
+    tracking = false;
+    var dx = e.clientX - startX;
+    var dy = e.clientY - startY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(current + (dx < 0 ? 1 : -1));
+  });
+  stage.addEventListener('pointercancel', function(){ tracking = false; });
+})();
+</script>
+</body>
+</html>

@@ -136,6 +136,10 @@ body.menu-open .menu{pointer-events:auto}
 .wimg .tag{position:absolute;left:16px;top:16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:rgba(12,12,12,.82);padding:9px 14px;border-radius:99px}
 .wthumbs{position:absolute;right:16px;bottom:16px;display:flex;gap:10px}
 .wthumbs img{width:clamp(80px,8vw,130px);aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:3px solid rgba(16,16,16,.9)}
+.wopen{position:absolute;inset:0;z-index:2;border-radius:inherit}
+.wopen:focus-visible{outline:2px solid var(--spark);outline-offset:-4px}
+.wgal{position:absolute;left:16px;bottom:16px;z-index:3;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:99px;background:rgba(12,12,12,.82);border:1px solid rgba(237,227,207,.3);font-size:13px;font-weight:500;pointer-events:none;transition:background .3s,color .3s,border-color .3s}
+.wopen:hover + .wgal,.wopen:focus-visible + .wgal{background:var(--cream);color:var(--bg);border-color:var(--cream)}
 .winfo{display:grid;grid-template-columns:60px 1fr auto;gap:18px;align-items:baseline;padding:24px 4px 0}
 .winfo .i{font-family:var(--serif);font-size:22px;color:var(--muted)}
 .winfo h3{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.2vw,52px);line-height:1}
@@ -263,6 +267,7 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   .wctrl button{width:50px;height:50px}
   .wcard{width:86vw}
   .track{gap:14px}
+  .wgal{left:12px;bottom:12px;padding:8px 12px;font-size:12px}
   .winfo{padding-top:16px;gap:4px}
   .winfo h3{font-size:32px}
   .winfo p{font-size:14px}
@@ -452,11 +457,11 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <div class="wrap">
     <div class="shead"><div><div class="eyebrow fx">What we make</div><h2 class="h2 fx" style="margin-top:12px">All kinds of<br><em>steel work</em></h2></div></div>
     <div class="svc">
-      <a href="#cta" data-img="img/p07.jpg"><img class="th" src="img/p07.jpg" alt=""><span class="n">01</span><span class="t">SS Main Gates</span><span class="d">Custom stainless steel gates, made to your size</span></a>
-      <a href="#cta" data-img="img/p11.jpg"><img class="th" src="img/p11.jpg" alt=""><span class="n">02</span><span class="t">Profile Gates</span><span class="d">Ribbed profile panels with name plates</span></a>
-      <a href="#cta" data-img="img/p15.jpg"><img class="th" src="img/p15.jpg" alt=""><span class="n">03</span><span class="t">Stair Railings</span><span class="d">SS pipe railings for stairs and landings</span></a>
-      <a href="#cta" data-img="img/p04.jpg"><img class="th" src="img/p04.jpg" alt=""><span class="n">04</span><span class="t">Glass Railings</span><span class="d">Designer glass with SS handrails</span></a>
-      <a href="#cta" data-img="media/reel2.jpg"><img class="th" src="media/reel2.jpg" alt=""><span class="n">05</span><span class="t">Grills &amp; Safety Doors</span><span class="d">Window grills and SS safety doors</span></a>
+      <a href="gallery.html?category=gates" data-img="img/p07.jpg"><img class="th" src="img/p07.jpg" alt=""><span class="n">01</span><span class="t">SS Main Gates</span><span class="d">Custom stainless steel gates, made to your size</span></a>
+      <a href="gallery.html?category=gates" data-img="img/p11.jpg"><img class="th" src="img/p11.jpg" alt=""><span class="n">02</span><span class="t">Profile Gates</span><span class="d">Ribbed profile panels with name plates</span></a>
+      <a href="gallery.html?category=stair-railings" data-img="img/p15.jpg"><img class="th" src="img/p15.jpg" alt=""><span class="n">03</span><span class="t">Stair Railings</span><span class="d">SS pipe railings for stairs and landings</span></a>
+      <a href="gallery.html?category=glass-railings" data-img="img/p04.jpg"><img class="th" src="img/p04.jpg" alt=""><span class="n">04</span><span class="t">Glass Railings</span><span class="d">Designer glass with SS handrails</span></a>
+      <a href="gallery.html?category=grills" data-img="media/reel2.jpg"><img class="th" src="media/reel2.jpg" alt=""><span class="n">05</span><span class="t">Grills &amp; Safety Doors</span><span class="d">Window grills and SS safety doors</span></a>
       <a href="#cta" data-img="img/p17.jpg"><img class="th" src="img/p17.jpg" alt=""><span class="n">06</span><span class="t">Pillars &amp; Custom Work</span><span class="d">SS pillars, planters and anything in steel</span></a>
     </div>
   </div>
@@ -547,17 +552,18 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 
   /* projects */
   var works = [
-    {cat:'Main gate', t:'Profile &amp; SS Gate', d:'Black profile panels, polished SS frame and lit medallions', imgs:['p07','p06','p08'], tag:'Lit at night'},
-    {cat:'Name plate gate', t:'Family Name Gate', d:'Ribbed profile gate with the family name cut in steel', imgs:['p10','p11','p12'], tag:'Custom lettering'},
-    {cat:'Staircase', t:'Outdoor Stair Railing', d:'SS pipe railing fitted straight on site', imgs:['p15','p16','p00'], tag:'Fitted on site'},
-    {cat:'Balcony', t:'Glass Balcony Railing', d:'Designer frosted glass with SS handrail', imgs:['p04','p05','p03'], tag:'Full front'},
+    {cat:'Main gate', t:'Profile &amp; SS Gate', d:'Black profile panels, polished SS frame and lit medallions', imgs:['p07','p06','p08'], tag:'Lit at night', gallery:'gates', glabel:'Gates'},
+    {cat:'Name plate gate', t:'Family Name Gate', d:'Ribbed profile gate with the family name cut in steel', imgs:['p10','p11','p12'], tag:'Custom lettering', gallery:'gates', glabel:'Gates'},
+    {cat:'Staircase', t:'Outdoor Stair Railing', d:'SS pipe railing fitted straight on site', imgs:['p15','p16','p00'], tag:'Fitted on site', gallery:'stair-railings', glabel:'Stair Railings'},
+    {cat:'Balcony', t:'Glass Balcony Railing', d:'Designer frosted glass with SS handrail', imgs:['p04','p05','p03'], tag:'Full front', gallery:'glass-railings', glabel:'Glass Railings'},
     {cat:'Details', t:'Designer SS Pillars', d:'Polished pillars with ball tops and cut-work panels', imgs:['p17','p01','p02'], tag:'Workshop made'},
-    {cat:'Makeover', t:'Old Gate, New Look', d:'Old gate out, new SS and profile gate in', imgs:['p19','p20','p18'], tag:'Before → After'}
+    {cat:'Makeover', t:'Old Gate, New Look', d:'Old gate out, new SS and profile gate in', imgs:['p19','p20','p18'], tag:'Before → After', gallery:'gates', glabel:'Gates'}
   ];
   var track = $('.track');
   works.forEach(function(w,i){
     var c = document.createElement('article'); c.className = 'wcard' + (i===0?' active':'');
-    c.innerHTML = '<div class="win"><div class="wimg"><img src="img/'+w.imgs[0]+'.jpg" alt="'+w.t.replace('&amp;','and')+'" draggable="false"><span class="tag">'+w.tag+'</span><div class="wthumbs"><img src="img/'+w.imgs[1]+'.jpg" alt="" draggable="false"><img src="img/'+w.imgs[2]+'.jpg" alt="" draggable="false"></div></div>'
+    var gal = w.gallery ? '<a class="wopen" href="gallery.html?category='+w.gallery+'" draggable="false" aria-label="View the '+w.glabel+' gallery"></a><span class="wgal" aria-hidden="true">View gallery →</span>' : '';
+    c.innerHTML = '<div class="win"><div class="wimg"><img src="img/'+w.imgs[0]+'.jpg" alt="'+w.t.replace('&amp;','and')+'" draggable="false"><span class="tag">'+w.tag+'</span><div class="wthumbs"><img src="img/'+w.imgs[1]+'.jpg" alt="" draggable="false"><img src="img/'+w.imgs[2]+'.jpg" alt="" draggable="false"></div>'+gal+'</div>'
       + '<div class="winfo"><span class="i">0'+(i+1)+'</span><div><div class="c">'+w.cat+'</div><h3>'+w.t+'</h3></div><p>'+w.d+'</p></div></div>';
     track.appendChild(c);
   });
@@ -578,10 +584,12 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   bNext.addEventListener('click', function(){ goTo(active+1); });
   setActive(0);
   /* mouse drag */
-  var down=false, sx=0, sl=0, moved=false;
-  track.addEventListener('pointerdown', function(e){ if (e.pointerType!=='mouse') return; down=true; moved=false; sx=e.clientX; sl=track.scrollLeft; });
+  var down=false, sx=0, sl=0, moved=false, suppressClick=false;
+  track.addEventListener('pointerdown', function(e){ if (e.pointerType!=='mouse') return; down=true; moved=false; suppressClick=false; sx=e.clientX; sl=track.scrollLeft; });
   window.addEventListener('pointermove', function(e){ if(!down) return; var dx=e.clientX-sx; if(Math.abs(dx)>5){ moved=true; track.classList.add('drag'); } track.scrollLeft = sl - dx; });
-  window.addEventListener('pointerup', function(){ if(!down) return; down=false; track.classList.remove('drag'); if(moved){ goTo(nearest()); } });
+  window.addEventListener('pointerup', function(){ if(!down) return; down=false; track.classList.remove('drag'); if(moved){ suppressClick=true; goTo(nearest()); } });
+  track.addEventListener('click', function(e){ if(suppressClick && e.detail!==0){ e.preventDefault(); e.stopPropagation(); } if(e.detail!==0) suppressClick=false; }, true);
+  track.addEventListener('dragstart', function(e){ e.preventDefault(); });
 
   /* ring decor */
   var tk=''; for (var i=0;i<72;i++){ var a=i/72*Math.PI*2, r2=(i%6===0)?92:100; tk+='<line x1="'+(110+Math.cos(a)*106).toFixed(1)+'" y1="'+(110+Math.sin(a)*106).toFixed(1)+'" x2="'+(110+Math.cos(a)*r2).toFixed(1)+'" y2="'+(110+Math.sin(a)*r2).toFixed(1)+'" stroke="#EDE3CF" stroke-opacity="'+((i%6===0)?.7:.3)+'"/>'; }
