@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gallery | Ramgarhia Steel by Welder Singh</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Work gallery | Ramgarhia Steel by Welder Singh</title>
 <meta name="description" content="Browse finished gates, stair railings, glass railings and window grills made by Ramgarhia Steel in Mandi Gobindgarh, Punjab.">
 <meta property="og:title" content="Gallery | Ramgarhia Steel by Welder Singh">
 <meta property="og:description" content="Finished gates, railings and grills from our workshop in Mandi Gobindgarh.">
@@ -84,9 +87,13 @@ footer{padding:44px 0 30px;background:var(--bg2)}
 @keyframes lbin{from{opacity:0}to{opacity:1}}
 .lb-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
 .lb-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
-.lb-bar{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding-top:16px;color:var(--text);font-size:14px}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px;color:var(--text);font-size:14px}
+.lb-meta{display:flex;align-items:baseline;gap:16px;min-width:0;flex:1 1 auto}
 .lb-bar p{max-width:82%;line-height:1.4}
 .lb-bar span{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.lb-ask{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;min-height:42px;padding:9px 16px;border:1px solid rgba(237,227,207,.35);border-radius:999px;font-size:13px;font-weight:500;color:var(--cream);white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
+.lb-ask:hover{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.lb-ask svg{width:15px;height:15px}
 .lb-btn{position:fixed;z-index:102;width:56px;height:56px;border:1px solid rgba(237,227,207,.32);border-radius:50%;background:rgba(12,12,12,.72);display:flex;align-items:center;justify-content:center;transition:background .3s,color .3s,border-color .3s}
 .lb-btn:hover{background:var(--cream);color:var(--bg);border-color:var(--cream)}
 .lb-btn svg{width:22px;height:22px}
@@ -108,8 +115,10 @@ footer{padding:44px 0 30px;background:var(--bg2)}
   .gcta-in{align-items:flex-start}
   .btns .pill{flex:1 1 auto}
   .lb{padding:64px 12px 96px}
-  .lb-bar{padding-bottom:4px;font-size:13px}
+  .lb-bar{padding-bottom:4px;font-size:13px;flex-wrap:wrap}
+  .lb-meta{flex:1 1 100%;gap:12px}
   .lb-bar p{max-width:100%}
+  .lb-ask{flex:1 1 auto;justify-content:center}
   .lb-btn{width:52px;height:52px}
   .lb-close{top:12px;right:12px}
   .lb-prev,.lb-next{top:auto;bottom:max(16px,env(safe-area-inset-bottom));transform:none}
@@ -139,10 +148,12 @@ footer{padding:44px 0 30px;background:var(--bg2)}
     <h1 id="catTitle">Gates</h1>
     <p class="lead" id="catDescription">Entry gates in profile steel and stainless steel, made to the size of the house. Some carry the family name, some carry lights; all are built in our Mandi Gobindgarh workshop.</p>
     <nav class="cats" aria-label="Gallery categories">
-      <a href="gallery.html?category=gates" data-cat="gates">Gates <span>07</span></a>
-      <a href="gallery.html?category=stair-railings" data-cat="stair-railings">Stair Railings <span>03</span></a>
+      <a href="gallery.html?category=gates" data-cat="gates">Gates <span>30</span></a>
+      <a href="gallery.html?category=stair-railings" data-cat="stair-railings">Stair Railings <span>13</span></a>
       <a href="gallery.html?category=glass-railings" data-cat="glass-railings">Glass Railings <span>02</span></a>
-      <a href="gallery.html?category=grills" data-cat="grills">Grills <span>04</span></a>
+      <a href="gallery.html?category=grills" data-cat="grills">Window Grills <span>09</span></a>
+      <a href="gallery.html?category=front-grills" data-cat="front-grills">Front Grills <span>07</span></a>
+      <a href="gallery.html?category=security-gates" data-cat="security-gates">Security Gates <span>09</span></a>
     </nav>
   </section>
 
@@ -180,7 +191,10 @@ footer{padding:44px 0 30px;background:var(--bg2)}
   <div class="lb-stage" id="lbStage">
     <img id="lbImg" alt="">
   </div>
-  <div class="lb-bar" aria-live="polite"><p id="lbCaption"></p><span id="lbCounter"></span></div>
+  <div class="lb-bar">
+    <div class="lb-meta" aria-live="polite"><p id="lbCaption"></p><span id="lbCounter"></span></div>
+    <a class="lb-ask" id="lbAsk" href="https://wa.me/918556999165">Ask about this design <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+  </div>
   <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
 </div>
 
@@ -196,7 +210,30 @@ footer{padding:44px 0 30px;background:var(--bg2)}
       {"src": "gallery/gates/profile-gate-upper-grill.jpg", "width": 720, "height": 1280, "caption": "Profile gate with an upper grill section", "alt": "Stainless steel profile gate with an upper grill section above the main panels"},
       {"src": "gallery/gates/modern-profile-gate-house.jpg", "width": 720, "height": 1280, "caption": "Modern profile gate at a private house", "alt": "Modern grey profile gate fitted at the entrance of a private house"},
       {"src": "gallery/gates/grey-profile-gate-closeup.jpg", "width": 720, "height": 1280, "caption": "Grey profile gate, close view of the panel work", "alt": "Close view of a grey profile gate showing the ribbed panel work and steel frame"},
-      {"src": "gallery/gates/wood-panel-stainless-gate.jpg", "width": 960, "height": 1280, "caption": "Wood-panel stainless steel gate", "alt": "Stainless steel gate with wood-effect panels and a matching side section"}
+      {"src": "gallery/gates/wood-panel-stainless-gate.jpg", "width": 960, "height": 1280, "caption": "Wood-panel stainless steel gate", "alt": "Stainless steel gate with wood-effect panels and a matching side section"},
+      {"src": "gallery/gates/new-01-img-3200.jpg", "width": 1197, "height": 896, "caption": "Custom stainless steel gate design 01", "alt": "Custom stainless steel gate design 01 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-02-img-3198.jpg", "width": 1195, "height": 896, "caption": "Custom stainless steel gate design 02", "alt": "Custom stainless steel gate design 02 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-03-img-3199.jpg", "width": 896, "height": 1195, "caption": "Custom stainless steel gate design 03", "alt": "Custom stainless steel gate design 03 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-04-img-3196.jpg", "width": 1450, "height": 1085, "caption": "Custom stainless steel gate design 04", "alt": "Custom stainless steel gate design 04 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-05-img-3197.jpg", "width": 1448, "height": 1086, "caption": "Custom stainless steel gate design 05", "alt": "Custom stainless steel gate design 05 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-06-img-3105.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 06", "alt": "Custom stainless steel gate design 06 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-07-img-2794.jpg", "width": 1080, "height": 1920, "caption": "Custom stainless steel gate design 07", "alt": "Custom stainless steel gate design 07 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-08-img-2711.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 08", "alt": "Custom stainless steel gate design 08 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-09-img-2492.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 09", "alt": "Custom stainless steel gate design 09 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-10-img-2270.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 10", "alt": "Custom stainless steel gate design 10 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-11-img-2251.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 11", "alt": "Custom stainless steel gate design 11 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-12-img-2526.jpg", "width": 1080, "height": 1920, "caption": "Custom stainless steel gate design 12", "alt": "Custom stainless steel gate design 12 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-13-img-2197.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 13", "alt": "Custom stainless steel gate design 13 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-14-img-2140.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 14", "alt": "Custom stainless steel gate design 14 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-15-img-1853.jpg", "width": 1080, "height": 1920, "caption": "Custom stainless steel gate design 15", "alt": "Custom stainless steel gate design 15 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-16-img-1660.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 16", "alt": "Custom stainless steel gate design 16 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-17-img-1489.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 17", "alt": "Custom stainless steel gate design 17 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-18-img-2575.jpg", "width": 1080, "height": 1920, "caption": "Custom stainless steel gate design 18", "alt": "Custom stainless steel gate design 18 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-19-img-2712.jpg", "width": 1080, "height": 1920, "caption": "Custom stainless steel gate design 19", "alt": "Custom stainless steel gate design 19 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-20-img-1348.jpg", "width": 1080, "height": 1920, "caption": "Custom stainless steel gate design 20", "alt": "Custom stainless steel gate design 20 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-21-img-1274.jpg", "width": 1440, "height": 1920, "caption": "Custom stainless steel gate design 21", "alt": "Custom stainless steel gate design 21 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-22-img-0779.jpg", "width": 1080, "height": 1920, "caption": "Custom stainless steel gate design 22", "alt": "Custom stainless steel gate design 22 made by Ramgarhia Steel"},
+      {"src": "gallery/gates/new-23-img-0780.jpg", "width": 1920, "height": 1080, "caption": "Custom stainless steel gate design 23", "alt": "Custom stainless steel gate design 23 made by Ramgarhia Steel"}
     ]
   },
   "stair-railings": {
@@ -205,7 +242,17 @@ footer{padding:44px 0 30px;background:var(--bg2)}
     "items": [
       {"src": "gallery/stair-railings/stainless-modern-stair-railing.jpg", "width": 720, "height": 1280, "caption": "Stainless steel stair railing with clean horizontal lines", "alt": "Modern stainless steel stair railing with horizontal bars along an indoor staircase"},
       {"src": "gallery/stair-railings/stair-railing-safety-gate.jpg", "width": 720, "height": 1280, "caption": "Stair railing with a matching safety gate", "alt": "Stainless steel stair railing with a matching safety gate at the top landing"},
-      {"src": "gallery/stair-railings/black-horizontal-stair-railing.jpg", "width": 720, "height": 1280, "caption": "Black horizontal-bar stair railing", "alt": "Black steel stair railing with horizontal bars fitted along a staircase"}
+      {"src": "gallery/stair-railings/black-horizontal-stair-railing.jpg", "width": 720, "height": 1280, "caption": "Black horizontal-bar stair railing", "alt": "Black steel stair railing with horizontal bars fitted along a staircase"},
+      {"src": "gallery/stair-railings/new-01-img-0937.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 01", "alt": "Stainless steel stair railing 01 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-02-img-1433.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 02", "alt": "Stainless steel stair railing 02 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-03-302b4d31-bbb9-451d-b7b2-9141799b20f3.jpg", "width": 1440, "height": 1920, "caption": "Stainless steel stair railing 03", "alt": "Stainless steel stair railing 03 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-04-img-1418.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 04", "alt": "Stainless steel stair railing 04 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-05-img-1811.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 05", "alt": "Stainless steel stair railing 05 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-06-img-1813.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 06", "alt": "Stainless steel stair railing 06 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-07-img-0943.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 07", "alt": "Stainless steel stair railing 07 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-08-img-20261012-222913.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 08", "alt": "Stainless steel stair railing 08 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-09-img-20261012-224314.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 09", "alt": "Stainless steel stair railing 09 made and fitted by Ramgarhia Steel"},
+      {"src": "gallery/stair-railings/new-10-img-20261012-224456.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel stair railing 10", "alt": "Stainless steel stair railing 10 made and fitted by Ramgarhia Steel"}
     ]
   },
   "glass-railings": {
@@ -217,13 +264,46 @@ footer{padding:44px 0 30px;background:var(--bg2)}
     ]
   },
   "grills": {
-    "title": "Grills",
+    "title": "Window Grills",
     "description": "Window and security grills made to fit the opening, with clean bar spacing and a finish that suits the house.",
     "items": [
       {"src": "gallery/grills/horizontal-window-grill.jpg", "width": 720, "height": 1280, "caption": "Horizontal-bar window security grill", "alt": "Horizontal-bar stainless steel window security grill fitted to a window"},
       {"src": "gallery/grills/bay-window-grill.jpg", "width": 597, "height": 1280, "caption": "Bay window grill, made to fit the angle", "alt": "Tall bay window security grill shaped to follow the window frame"},
       {"src": "gallery/grills/tall-security-grill.jpg", "width": 720, "height": 1280, "caption": "Tall window security grill", "alt": "Tall stainless steel security grill with vertical bars covering a full window"},
-      {"src": "gallery/grills/corner-window-grill.jpg", "width": 720, "height": 1280, "caption": "Corner window grill with a custom frame", "alt": "Corner window security grill with a custom steel frame and vertical bars"}
+      {"src": "gallery/grills/corner-window-grill.jpg", "width": 720, "height": 1280, "caption": "Corner window grill with a custom frame", "alt": "Corner window security grill with a custom steel frame and vertical bars"},
+      {"src": "gallery/grills/new-01-img-3134.jpg", "width": 1920, "height": 1080, "caption": "Window grill design 01", "alt": "Window grill design 01 made to fit a home window by Ramgarhia Steel"},
+      {"src": "gallery/grills/new-02-img-3022.jpg", "width": 1920, "height": 1080, "caption": "Window grill design 02", "alt": "Window grill design 02 made to fit a home window by Ramgarhia Steel"},
+      {"src": "gallery/grills/new-03-img-2989.jpg", "width": 1080, "height": 1920, "caption": "Window grill design 03", "alt": "Window grill design 03 made to fit a home window by Ramgarhia Steel"},
+      {"src": "gallery/grills/new-04-img-2050.jpg", "width": 1080, "height": 1920, "caption": "Window grill design 04", "alt": "Window grill design 04 made to fit a home window by Ramgarhia Steel"},
+      {"src": "gallery/grills/new-08-img-0218.jpg", "width": 1440, "height": 1920, "caption": "Window grill design 05", "alt": "Window grill design 05 made to fit a home window by Ramgarhia Steel"}
+    ]
+  },
+  "front-grills": {
+    "title": "Front Grills",
+    "description": "Front grills and elevation railings in steel and glass, made for balconies, terraces and house frontages. Each run is measured on site so the finished front looks deliberate and even.",
+    "items": [
+      {"src": "gallery/front-grills/new-01-img-2898.jpg", "width": 1080, "height": 1920, "caption": "Front grill design 01", "alt": "Front grill design 01 on a house frontage by Ramgarhia Steel"},
+      {"src": "gallery/front-grills/new-02-img-2572.jpg", "width": 1080, "height": 1920, "caption": "Front grill design 02", "alt": "Front grill design 02 on a house frontage by Ramgarhia Steel"},
+      {"src": "gallery/front-grills/new-03-img-1512.jpg", "width": 1080, "height": 1920, "caption": "Front grill design 03", "alt": "Front grill design 03 on a house frontage by Ramgarhia Steel"},
+      {"src": "gallery/front-grills/new-04-img-0883.jpg", "width": 1920, "height": 1080, "caption": "Front grill design 04", "alt": "Front grill design 04 on a house frontage by Ramgarhia Steel"},
+      {"src": "gallery/front-grills/new-05-img-0872.jpg", "width": 1080, "height": 1920, "caption": "Front grill design 05", "alt": "Front grill design 05 on a house frontage by Ramgarhia Steel"},
+      {"src": "gallery/front-grills/new-06-img-0820.jpg", "width": 1080, "height": 1920, "caption": "Front grill design 06", "alt": "Front grill design 06 on a house frontage by Ramgarhia Steel"},
+      {"src": "gallery/front-grills/new-07-img-20261119-wa0000.jpg", "width": 1200, "height": 1600, "caption": "Front grill design 07", "alt": "Front grill design 07 on a house frontage by Ramgarhia Steel"}
+    ]
+  },
+  "security-gates": {
+    "title": "Security Gates",
+    "description": "Stainless steel safety and security door gates for main doors, side entrances and stairways. Built to lock securely and finished to suit the house.",
+    "items": [
+      {"src": "gallery/security-gates/new-01-img-3169.jpg", "width": 1124, "height": 1838, "caption": "Stainless steel security gate 01", "alt": "Stainless steel security gate 01 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-02-img-2983.jpg", "width": 1026, "height": 1920, "caption": "Stainless steel security gate 02", "alt": "Stainless steel security gate 02 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-03-img-3117.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel security gate 03", "alt": "Stainless steel security gate 03 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-04-img-2449.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel security gate 04", "alt": "Stainless steel security gate 04 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-05-img-2184.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel security gate 05", "alt": "Stainless steel security gate 05 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-06-img-1652.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel security gate 06", "alt": "Stainless steel security gate 06 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-07-img-2157.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel security gate 07", "alt": "Stainless steel security gate 07 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-08-img-1483.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel security gate 08", "alt": "Stainless steel security gate 08 fitted at a home entrance by Ramgarhia Steel"},
+      {"src": "gallery/security-gates/new-09-img-0816.jpg", "width": 1080, "height": 1920, "caption": "Stainless steel security gate 09", "alt": "Stainless steel security gate 09 fitted at a home entrance by Ramgarhia Steel"}
     ]
   }
 }
@@ -242,13 +322,24 @@ footer{padding:44px 0 30px;background:var(--bg2)}
   var count = document.getElementById('catCount');
   var wa = document.getElementById('waCta');
 
+  function galleryUrl(){ return window.location.href.split('#')[0]; }
+  function waLink(text){ return 'https://wa.me/918556999165?text=' + encodeURIComponent(text); }
+  function quoteMessage(){
+    return 'Hi Ramgarhia Steel, I would like a quote for the ' + cat.title + ' gallery.\n\n'
+      + 'Gallery: ' + galleryUrl() + '\n'
+      + 'Approximate size: \n'
+      + 'Location: \n'
+      + 'Preferred design/photo number: \n\n'
+      + 'Please share design options and an estimated price.';
+  }
+
   document.title = cat.title + ' gallery | Ramgarhia Steel by Welder Singh';
   var meta = document.querySelector('meta[name="description"]');
   if (meta) meta.content = cat.description;
   title.textContent = cat.title;
   description.textContent = cat.description;
   count.textContent = cat.items.length + ' project' + (cat.items.length === 1 ? '' : 's');
-  wa.href = 'https://wa.me/918556999165?text=' + encodeURIComponent('Hi Ramgarhia Steel, I would like a quote for a project like the ones in your ' + cat.title + ' gallery.');
+  wa.href = waLink(quoteMessage());
 
   document.querySelectorAll('.cats a').forEach(function(a){
     if (a.dataset.cat === key) a.setAttribute('aria-current','page');
@@ -293,8 +384,19 @@ footer{padding:44px 0 30px;background:var(--bg2)}
   var lbClose = document.getElementById('lbClose');
   var lbPrev = document.getElementById('lbPrev');
   var lbNext = document.getElementById('lbNext');
+  var lbAsk = document.getElementById('lbAsk');
   var current = 0;
   var lastFocus = null;
+
+  function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+  function askMessage(){
+    var item = cat.items[current];
+    return 'Hi Ramgarhia Steel, I am interested in design ' + pad2(current + 1) + ' from your ' + cat.title + ' gallery: ' + item.caption + '.\n\n'
+      + 'Gallery: ' + galleryUrl() + '\n\n'
+      + 'Please share design options and an estimated price.';
+  }
+  function updateAsk(){ lbAsk.href = waLink(askMessage()); }
+  updateAsk();
 
   function show(i){
     current = (i + cat.items.length) % cat.items.length;
@@ -305,6 +407,7 @@ footer{padding:44px 0 30px;background:var(--bg2)}
     lbCounter.textContent = (current + 1) + ' / ' + cat.items.length;
     lbImg.width = item.width;
     lbImg.height = item.height;
+    updateAsk();
   }
 
   function openLb(i, opener){
@@ -335,7 +438,7 @@ footer{padding:44px 0 30px;background:var(--bg2)}
     else if (e.key === 'ArrowLeft'){ e.preventDefault(); show(current - 1); }
     else if (e.key === 'ArrowRight'){ e.preventDefault(); show(current + 1); }
     else if (e.key === 'Tab'){
-      var f = [lbClose, lbPrev, lbNext];
+      var f = [lbClose, lbPrev, lbAsk, lbNext];
       var first = f[0], last = f[f.length - 1];
       if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
       else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
