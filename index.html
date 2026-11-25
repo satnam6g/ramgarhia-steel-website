@@ -538,7 +538,7 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <footer>
     <div class="wrap">
       <div class="fmark"><svg viewBox="0 0 801 801" aria-hidden="true"><path fill="#EDE3CF" fill-rule="evenodd" d="M313 563 L314 629 L470 726 L483 721 L643 619 L640 613 L598 589 L586 586 L477 656 L469 658 L327 568 Z M791 555 L782 557 L474 749 L317 653 L314 654 L315 696 L430 767 L475 791 L789 592 Z M344 418 L345 422 L662 606 L683 597 L723 571 L717 563 L450 416 L447 412 L450 408 L490 390 L523 408 L524 413 L510 429 L527 438 L591 400 L585 393 L498 348 L481 346 Z M316 10 L303 14 L26 165 L11 177 L10 526 L23 537 L90 573 L93 572 L95 210 L154 175 L166 172 L330 263 L341 280 L341 297 L330 312 L291 327 L169 257 L162 257 L162 613 L240 657 L244 656 L242 486 L245 471 L469 601 L475 601 L475 531 L471 526 L246 394 L242 388 L242 376 L248 372 L291 397 L300 399 L413 336 L423 315 L423 263 L415 241 L403 224 L376 205 L228 125 L228 121 L367 39 L364 33 Z"/></svg><div>Ramgarhia Steel</div><small>by Welder Singh</small></div>
-      <div class="fbot"><span>© 2026 Ramgarhia Steel. All rights reserved.</span><span><a href="https://www.instagram.com/weldersingh/">Instagram @weldersingh</a></span></div>
+      <div class="fbot"><span>© 2026 Ramgarhia Steel. All rights reserved.</span><span><a href="https://www.instagram.com/weldersingh/">Instagram @weldersingh</a></span><span>Website made by <a href="https://satnam-edit.flumo.workers.dev" target="_blank" rel="noopener">Satnam ↗</a></span></div>
     </div>
   </footer>
 </section>
@@ -547,6 +547,27 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* hero autoplay: keep the .vcard video playing reliably */
+(function(){
+  var v = document.querySelector('.vcard video');
+  if(!v) return;
+  v.muted = true;
+  var ok = false, attempts = 0;
+  function tryPlay(){
+    if(ok || attempts > 10) return;
+    attempts++;
+    var p;
+    try { p = v.play(); } catch(e){ p = null; }
+    if(p && p.catch){ p.then(function(){ ok = true; }, function(){ attempts = 0; }); }
+    else ok = true;
+  }
+  var retry = function(){ if(!ok){ attempts = 0; tryPlay(); } };
+  ['canplay','loadeddata'].forEach(function(ev){ v.addEventListener(ev, retry); });
+  document.addEventListener('visibilitychange', function(){ if(document.visibilityState === 'visible') retry(); });
+  tryPlay();
+})();
+</script>
 <script>
 (function(){
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
