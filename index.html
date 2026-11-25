@@ -26,7 +26,8 @@ body.locked{overflow:hidden}
 img,video,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+:focus-visible{outline:2px solid var(--spark);outline-offset:3px}
+.wrap{max-width:1440px;width:100%;margin-inline:auto;padding:0 var(--pad)}
 .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
 .eyebrow.o{color:var(--spark)}
 .h2{font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.6vw,108px);line-height:1;letter-spacing:-.01em}
@@ -242,7 +243,7 @@ footer .fmark div{font-family:var(--serif);font-size:clamp(40px,6vw,84px);line-h
 footer .fmark small{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
 footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:56px;font-size:13px;color:var(--muted)}
 
-.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.45);transition:transform .3s}
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.45);transition:transform .3s,opacity .3s}
 .wa:hover{transform:scale(1.08)}
 .wa svg{width:28px;height:28px}
 
@@ -314,7 +315,7 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   .cgrid p,.cgrid a.big{font-size:17px}
   footer{padding:48px 0 90px}
   footer .fbot{justify-content:center;text-align:center;margin-top:36px}
-  .wa{width:52px;height:52px;right:14px;bottom:14px;transition:transform .3s,opacity .3s}
+  .wa{width:52px;height:52px;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));transition:transform .3s,opacity .3s}
 }
 
 /* ===== one-screen hero for phones and tablets ===== */
@@ -579,14 +580,11 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 
   /* WhatsApp quote templates */
   var siteUrl = window.location.href.split('#')[0];
-  var waQuote = 'https://wa.me/918556999165?text=' + encodeURIComponent(
-    'Hi Ramgarhia Steel, I would like a quote.\n\nWebsite: ' + siteUrl + '\nWork type: \nApproximate size: \nLocation: '
-  );
   var waQuoteFull = 'https://wa.me/918556999165?text=' + encodeURIComponent(
     'Hi Ramgarhia Steel, I would like a quote.\n\nWebsite: ' + siteUrl + '\nWork type: \nApproximate size: \nLocation: \n\nPlease share design options and an estimated price.'
   );
   var waFloat = $('#waFloat'), waCtaHome = $('#waCtaHome');
-  if (waFloat) waFloat.href = waQuote;
+  /* floating badge keeps pointing at the plain WhatsApp number; CTAs prefill the quote */
   if (waCtaHome) waCtaHome.href = waQuoteFull;
 
   /* projects */
@@ -660,7 +658,7 @@ footer .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   $$('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(e){ var id=a.getAttribute('href'), el=id.length>1&&$(id); if(!el) return; e.preventDefault(); if(body.classList.contains('menu-open')) setMenu(false); window.scrollTo({top: el.getBoundingClientRect().top + window.pageYOffset - (id==='#hero'?0:70), behavior: reduce?'auto':'smooth'}); }); });
 
   /* nav solid */
-  var nav=$('nav.top'); var waBtn=$('.wa'); var onScroll=function(){ var y=window.pageYOffset; nav.classList.toggle('solid', y > 20); waBtn.classList.toggle('away', y < window.innerHeight*.8); }; window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  var nav=$('nav.top'); var waBtn=$('.wa'); var onScroll=function(){ var y=window.pageYOffset; nav.classList.toggle('solid', y > 20); waBtn.classList.toggle('away', y > window.innerHeight*0.8); }; window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   if (!G || reduce){ $('#loader').style.display='none'; body.classList.remove('locked'); $$('.statement .w').forEach(function(w){ w.style.color='var(--cream)'; }); return; }
   gsap.registerPlugin(ScrollTrigger);
